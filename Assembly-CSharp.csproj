@@ -177,51 +177,6 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
- <Reference Include="MathNet.Numerics">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/Math.NET/netstandard2.0/MathNet.Numerics.dll</HintPath>
- </Reference>
- <Reference Include="netstandard">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/netstandard.dll</HintPath>
- </Reference>
- <Reference Include="System.Data.Common">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Data.Common.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.StackTrace">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
- </Reference>
- <Reference Include="System.Diagnostics.Tracing">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Diagnostics.Tracing.dll</HintPath>
- </Reference>
- <Reference Include="System.Globalization.Extensions">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Globalization.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.Sockets">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Net.Sockets.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization.Primitives">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization.Xml">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.Cryptography.Algorithms">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
- </Reference>
- <Reference Include="System.Security.SecureString">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Security.SecureString.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading.Overlapped">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Threading.Overlapped.dll</HintPath>
- </Reference>
- <Reference Include="System.ValueTuple">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.ValueTuple.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.XPath.XDocument">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
- </Reference>
- <Reference Include="System.Numerics">
- <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/System.Numerics/System.Numerics.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
@@ -233,6 +188,51 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.SecureString">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Security.SecureString.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ValueTuple">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.ValueTuple.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Xml">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="netstandard">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/netstandard.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XPath.XDocument">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Numerics">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/System.Numerics/System.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization.Extensions">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Globalization.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Tracing">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Diagnostics.Tracing.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Sockets">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Net.Sockets.dll</HintPath>
+ </Reference>
+ <Reference Include="MathNet.Numerics">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/Math.NET/netstandard2.0/MathNet.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Overlapped">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Threading.Overlapped.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Algorithms">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data.Common">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Data.Common.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Primitives">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.StackTrace">
+ <HintPath>E:/Documents/Unity 5 Projects/QuantumGate/Assets/02_Plugins/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

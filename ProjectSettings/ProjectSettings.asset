@@ -643,9 +643,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 3
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 81433116-539c-4845-bc8c-1cb4f391a5b7
+  projectName: QuantumGate
+  organizationId: unity_ip-a9jkku4o_8w
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
