@@ -63,7 +63,7 @@ namespace QCS
             {
                 double p = (this.Vector[0, i] * this.Vector[0, i]).Real;
                 if (p > 0)
-                    s += "|" + Convert.ToString(i, 2).PadLeft(n, '0') + "> : " + p + "\n";
+                    s += "|" + Convert.ToString(i, 2).PadLeft(n, '0') + "> : " + this.Vector[0, i].Real + "\n";
             }
 
             return s;
