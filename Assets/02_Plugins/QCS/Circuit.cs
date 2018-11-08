@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace QCS
 {
@@ -349,6 +350,10 @@ namespace QCS
                 return false;
 
             GateStruct gateStruct = rows[sourceRow][sourceCol];
+
+            Debug.Log("NbEntries : " + gateStruct.gate.NbEntries);
+            if (gateStruct.gate.NbEntries > 1 && targetCol >= (NbCol - 1))
+                    return false;
 
             if (targetCol < 0 || targetCol + gateStruct.gate.NbEntries > NbCol)
                 return false;

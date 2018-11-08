@@ -1,0 +1,64 @@
+<LevelCollection>
+	<Levels>
+		<Level id="0">
+			<NbColonnes>
+				2
+			</NbColonnes>
+	        <ColonneHeight>
+	          3
+	        </ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Porte>
+						1
+					</Porte>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Porte>
+						3
+					</Porte>
+				</Colonne>
+			</Colonnes>
+		</Level>
+		<Level id="1">
+			<NbColonnes>
+				3
+			</NbColonnes>
+	        <ColonneHeight>
+	          4
+	        </ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Porte>
+						1
+					</Porte>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Porte>
+						2
+					</Porte>
+				</Colonne>
+				<Colonne nColonne="2">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Porte>
+						0
+					</Porte>
+				</Colonne>
+			</Colonnes>
+		</Level>
+	</Levels>
+</LevelCollection>
