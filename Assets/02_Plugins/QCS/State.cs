@@ -69,25 +69,40 @@ namespace QCS
                     if (p < min)
                         min = p;
             }
-            Debug.Log("Min : " + min);
+            string working_string = "";
             for (int i = 0; i < this.Vector.ColumnCount; i++)
             {
                 double p = (this.Vector[0, i] * this.Vector[0, i]).Real;
                 if (p > 0)
                 {
+                    if (string.Format("{0:N2}", (this.Vector[0, i]).Real)[0].Equals('-'))
+                        working_string += "-   ";
                     for (double j = 0.0f; j < min; j += (this.Vector[0, i] * this.Vector[0, i]).Real) // 2*min?
-                        s += Convert.ToString(i, 2).PadLeft(n, '0') + ", ";
+                    {
+                        string binary_string = Convert.ToString(i, 2).PadLeft(n, '0') + ",   ";
+                        for (int k = 0; k < binary_string.Length; k++)
+                        {
+
+                            if (binary_string[k].Equals('0'))
+                                working_string += "<sprite=\"boule_blanche\" name=\"boule_blanche\">";
+                            else if (binary_string[k].Equals('1'))
+                                working_string += "<sprite=\"boule_noir\" name=\"boule_noir\">";
+                            else
+                                working_string += binary_string[k];
+                        }
+                    }
                 }
             }
-            s += "\n";
+            s += working_string.Substring(0, working_string.Length - 4);
+            /*s += "\n";
             for (int i = 0; i < this.Vector.ColumnCount; i++)
             {
                 double p = (this.Vector[0, i] * this.Vector[0, i]).Real;
                 if (p > 0)
                 {
-                    s += string.Format("{0:N2}", (this.Vector[0, i] * this.Vector[0, i]).Real) + "   |" + Convert.ToString(i, 2).PadLeft(n, '0') + "> " + "\n";
+                    s += string.Format("{0:N2}", (this.Vector[0, i]).Real) + "   |" + Convert.ToString(i, 2).PadLeft(n, '0') + "> " + "\n";
                 }
-            }
+            }*/
 
             return s;
         }

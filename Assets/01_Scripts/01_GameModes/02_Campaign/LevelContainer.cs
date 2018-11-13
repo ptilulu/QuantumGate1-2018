@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
 using System.IO;
+using System.Xml;
 
 [XmlRoot("LevelCollection")]
 public class LevelContainer {
@@ -24,11 +25,34 @@ public class LevelContainer {
 
     public static LevelContainer Load(string path)
     {
-        var serializer = new XmlSerializer(typeof(LevelContainer));
-        using (var stream = new FileStream(path, FileMode.Open))
+        if (Application.platform == RuntimePlatform.WindowsEditor)
         {
-            return serializer.Deserialize(stream) as LevelContainer;
+            var serializer = new XmlSerializer(typeof(LevelContainer));
+            using (var stream = new FileStream(path, FileMode.Open))
+            {
+                return serializer.Deserialize(stream) as LevelContainer;
+            }
         }
+        else if (Application.platform == RuntimePlatform.Android)
+        {
+            var www = new WWW(path);
+            while (!www.isDone) { } // Wait for the reader to finish reading
+
+            if (!string.IsNullOrEmpty(www.error))
+                Debug.LogError("Can't read");
+            
+            XmlSerializer serializer = new XmlSerializer(typeof(LevelContainer));
+            MemoryStream stream = new MemoryStream(www.bytes);
+
+            LevelContainer levelContainer = new LevelContainer();
+            if (stream != null)
+                levelContainer = serializer.Deserialize(stream) as LevelContainer;
+
+            stream.Close();
+            return levelContainer;
+        }
+        return new LevelContainer();
+
     }
 
 }

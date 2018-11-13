@@ -33,14 +33,17 @@ public class CreateButtonLevels : MonoBehaviour
              newButton.GetComponent<Button>().enabled = false;
              newButton.transform.SetParent(grid.transform, false);
          }*/
-        /*var levelCollection = new LevelContainer();
-        if (Application.platform == RuntimePlatform.WindowsEditor) levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "StreamingAssets", "test.xml"));
-        else if (Application.platform == RuntimePlatform.Android) levelCollection = LevelContainer.Load("jar:file://" + Application.dataPath + "!/assets/test.xml");*/
-        var levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "Resources", "test.xml"));
 
-        /*GameObject text = Instantiate(buttonPrefab);
-        text.GetComponentInChildren<Text>().text = levelCollection.Levels.Count.ToString();
-        text.transform.SetParent(grid.transform, false);*/
+        GameObject text = Instantiate(buttonPrefab);
+        text.GetComponentInChildren<Text>().text = "Test";
+        text.GetComponent<LoadLevel>().level = new Level();
+        text.GetComponent<LoadScene>().sceneName = "CampaignLevel";
+        text.transform.SetParent(grid.transform, false);
+
+        //var levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "Resources", "test.xml"));
+        var levelCollection = new LevelContainer();
+        if (Application.platform == RuntimePlatform.WindowsEditor) levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "StreamingAssets", "test.xml"));
+        else if (Application.platform == RuntimePlatform.Android) levelCollection = LevelContainer.Load("jar:file://" + Application.dataPath + "!/assets/test.xml");
 
         for (int i = 0; i < levelCollection.Levels.Count; i++)
         {

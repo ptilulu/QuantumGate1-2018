@@ -32,7 +32,8 @@ namespace PC_States
     {
         Debug.Log("ShowResult");
         context.SetResultHeader("Result of row : " + _row);
-        context.SetResultText(context.currentCircuit.Evaluate(_row).ToString());
+        string baseString = context.currentCircuit.Evaluate(_row).ToString();
+        context.SetResultText(baseString);
         context.ShowResultPanel(true);
     }
 

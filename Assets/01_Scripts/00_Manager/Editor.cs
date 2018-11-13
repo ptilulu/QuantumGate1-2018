@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Editor : MonoBehaviour
 {
@@ -167,7 +168,8 @@ public class Editor : MonoBehaviour
 
     public void SetResultText(string text)
     {
-        resultHeader.GetComponent<Text>().text = text;
+        //resultHeader.AddComponent<TextMeshPro>();
+        resultHeader.GetComponent<TextMeshProUGUI>().SetText(text);
     }
 
 

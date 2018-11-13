@@ -943,32 +943,32 @@ Prefab:
     - target: {fileID: 224620762574474150, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224620762574474150, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 600
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224620762574474150, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224620762574474150, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224620762574474150, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224620762574474150, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224620762574474150, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
@@ -987,22 +987,22 @@ Prefab:
     - target: {fileID: 224223124903145690, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 224223124903145690, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: -222
       objectReference: {fileID: 0}
     - target: {fileID: 224479664440193130, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 11.000015
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 224479664440193130, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: -82
       objectReference: {fileID: 0}
     - target: {fileID: 224479664440193130, guid: db9b2acb123ccbf40b33d28378d2a005,
         type: 2}
@@ -1023,6 +1023,91 @@ Prefab:
         type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224223124903145690, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224223124903145690, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224223124903145690, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224223124903145690, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224107377859530836, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224107377859530836, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224107377859530836, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224107377859530836, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224107377859530836, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224479664440193130, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224479664440193130, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825851741367274, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825851741367274, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825851741367274, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825851741367274, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_Text
+      value: Return
+      objectReference: {fileID: 0}
+    - target: {fileID: 224223124903145690, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224317047495162466, guid: db9b2acb123ccbf40b33d28378d2a005,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.299988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db9b2acb123ccbf40b33d28378d2a005, type: 2}
@@ -1370,10 +1455,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1400, y: 1100}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
