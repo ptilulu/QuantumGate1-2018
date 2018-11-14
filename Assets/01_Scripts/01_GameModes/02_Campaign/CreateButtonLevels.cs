@@ -34,12 +34,6 @@ public class CreateButtonLevels : MonoBehaviour
              newButton.transform.SetParent(grid.transform, false);
          }*/
 
-        GameObject text = Instantiate(buttonPrefab);
-        text.GetComponentInChildren<Text>().text = "Test";
-        text.GetComponent<LoadLevel>().level = new Level();
-        text.GetComponent<LoadScene>().sceneName = "CampaignLevel";
-        text.transform.SetParent(grid.transform, false);
-
         //var levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "Resources", "test.xml"));
         var levelCollection = new LevelContainer();
         if (Application.platform == RuntimePlatform.WindowsEditor) levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "StreamingAssets", "test.xml"));

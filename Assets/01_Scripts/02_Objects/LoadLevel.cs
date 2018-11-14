@@ -24,17 +24,16 @@ public class LoadLevel : MonoBehaviour
 
         GameMode.nameGame = "";
         GameMode.circuits = circuits;
+        GameMode.level = level;
         GameMode.gates = new List<QCS.Gate>() { QCS.Gate.NOT, QCS.Gate.CONTROL, QCS.Gate.SWAP, QCS.Gate.HADAMARD };
         GameMode.customGates = new List<QCS.Gate>();
-        //Debug.Log("lol");
         for (int i = 0; i < level.NbColonnes; i++)
         {
-            //Debug.Log("lel " + i);
             if (level.colonnes[i].BitDefaut == 0)
                 GameMode.circuits[0].SetEntry(i, QCS.Qubit.Zero);
             else
                 GameMode.circuits[0].SetEntry(i, QCS.Qubit.One);
-            //Debug.Log("kek " + i);
+            
             Debug.Log("Type of gate : " + level.colonnes[i].Porte);
             switch(level.colonnes[i].Porte)
             {
@@ -57,6 +56,7 @@ public class LoadLevel : MonoBehaviour
             }
             
         }
+        Debug.Log("Expected results : " + level.Resultats);
 
         SceneManager.LoadScene("CampaignLevel", LoadSceneMode.Single);
     }

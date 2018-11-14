@@ -13,6 +13,8 @@ public class Level {
 
     public int ColonneHeight;
 
+    public string Resultats;
+
     [XmlArray("Colonnes")]
     [XmlArrayItem("Colonne")]
     public List<Colonne> colonnes = new List<Colonne>();

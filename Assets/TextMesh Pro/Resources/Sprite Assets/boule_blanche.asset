@@ -21,7 +21,7 @@ MonoBehaviour:
     y: 0
     width: 600
     height: 600
-    xOffset: -300
+    xOffset: 0
     yOffset: 500
     xAdvance: 600
     scale: 1

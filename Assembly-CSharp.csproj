@@ -70,6 +70,7 @@
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\BackResultButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\BackSessionNameInputButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\BackSettingsButton.cs" />
+     <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\CompareCircuitButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\DeleteCircuitButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\DeleteColButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\DeleteGateButton.cs" />
@@ -114,6 +115,7 @@
      <Compile Include="Assets\01_Scripts\04_DAO\UserDAOXML.cs" />
      <Compile Include="Assets\01_Scripts\04_DAO\UserData.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\EditorState.cs" />
+     <Compile Include="Assets\01_Scripts\05_States\EditorStates\PC_States\CompareResult.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\PC_States\DefaultState.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\PC_States\EditionState.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\PC_States\EditSettings.cs" />
@@ -127,6 +129,7 @@
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\PC_States\SelectGateToInsert.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\PC_States\SelectGridAction.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\PC_States\ShowResult.cs" />
+     <Compile Include="Assets\01_Scripts\05_States\EditorStates\Smartphone_States\CompareResult.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\Smartphone_States\DefaultState.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\Smartphone_States\DragCol.cs" />
      <Compile Include="Assets\01_Scripts\05_States\EditorStates\Smartphone_States\DragGate.cs" />

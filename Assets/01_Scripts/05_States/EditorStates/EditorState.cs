@@ -102,6 +102,9 @@ public class EditorState : State<Editor>
     public virtual void OnSaveCircuitClick() { }
     public virtual void OnDeleteCircuitClick() { }
 
+    // Compare Circuit
+    public virtual void OnCompareCircuitClick() { }
+
     // Circuit subactions
     public virtual void OnBackGateNameClick() { }
     public virtual void OnValidGateNameClick() { }

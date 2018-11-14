@@ -27,8 +27,14 @@ public class Editor : MonoBehaviour
     private GameObject gatesMenu;
     [SerializeField]
     private GameObject settingsPanel;
+    [SerializeField]
+    private GameObject compareResultPanel;
+    [SerializeField]
+    private GameObject compareResultHeader;
+    [SerializeField]
+    private GameObject compareTextHeader;
 
-    
+
     [SerializeField]
     private GameObject gateMenu;
     [SerializeField]
@@ -168,10 +174,25 @@ public class Editor : MonoBehaviour
 
     public void SetResultText(string text)
     {
-        //resultHeader.AddComponent<TextMeshPro>();
         resultHeader.GetComponent<TextMeshProUGUI>().SetText(text);
     }
 
+    // Compare result panel
+
+    public void ShowCompareResultPanel(bool active)
+    {
+        compareResultPanel.SetActive(active);
+    }
+
+    public void SetCompareResultHeader(string header)
+    {
+        compareTextHeader.GetComponent<Text>().text = header;
+    }
+
+    public void SetCompareResultText(string text)
+    {
+        compareResultHeader.GetComponent<TextMeshProUGUI>().SetText(text);
+    }
 
     // Setting panel
 

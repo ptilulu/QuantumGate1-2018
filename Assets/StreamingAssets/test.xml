@@ -26,6 +26,7 @@
 					</Porte>
 				</Colonne>
 			</Colonnes>
+			<Resultats>00, 01</Resultats>
 		</Level>
 		<Level id="1">
 			<NbColonnes>
