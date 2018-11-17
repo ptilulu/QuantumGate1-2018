@@ -34,11 +34,6 @@ namespace PC_States
         context.SetResultHeader("Result of row : " + _row);
         context.SetResultText(context.currentCircuit.Evaluate(_row).ToStringWithSprites());
         context.ShowResultPanel(true);
-        Debug.Log("Expected results : " + GameMode.level.Resultats);
-        if (GameMode.level.Resultats.Equals(context.currentCircuit.Evaluate(_row).ToString()))
-                Debug.Log("Level clear");
-        else
-                Debug.Log("Retry...");
         }
 
     public override void OnExit() { context.ShowResultPanel(false); }

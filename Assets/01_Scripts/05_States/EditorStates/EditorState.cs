@@ -48,6 +48,11 @@ public class EditorState : State<Editor>
     public virtual void OnBackButton() { }
 
     /// <summary>
+    /// Evenement lors d'un clic sur un bouton pour passer au niveau suivant.
+    /// </summary>
+    public virtual void OnNextLevelButton() { }
+
+    /// <summary>
     /// Evenement lors d'un clic rapide sur un des inputs (qubit)
     /// </summary>
     /// <param name="entry">L'objet du qubit</param>
@@ -104,6 +109,7 @@ public class EditorState : State<Editor>
 
     // Compare Circuit
     public virtual void OnCompareCircuitClick() { }
+    public virtual void OnNextLevelClick() { }
 
     // Circuit subactions
     public virtual void OnBackGateNameClick() { }

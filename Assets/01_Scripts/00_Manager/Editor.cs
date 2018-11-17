@@ -30,7 +30,7 @@ public class Editor : MonoBehaviour
     [SerializeField]
     private GameObject compareResultPanel;
     [SerializeField]
-    private GameObject compareResultHeader;
+    public GameObject nextLevelButton;
     [SerializeField]
     private GameObject compareTextHeader;
 
@@ -184,14 +184,14 @@ public class Editor : MonoBehaviour
         compareResultPanel.SetActive(active);
     }
 
-    public void SetCompareResultHeader(string header)
-    {
-        compareTextHeader.GetComponent<Text>().text = header;
-    }
-
     public void SetCompareResultText(string text)
     {
-        compareResultHeader.GetComponent<TextMeshProUGUI>().SetText(text);
+        compareTextHeader.GetComponent<TextMeshProUGUI>().SetText(text);
+    }
+
+    public void ShowNextLevelButton(bool active)
+    {
+        nextLevelButton.SetActive(active);
     }
 
     // Setting panel

@@ -84,6 +84,7 @@
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\MoveGateButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\MoveRowButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\NextCircuitButton.cs" />
+     <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\NextLevelButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\PreviousCircuitButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\ProcessCircuitButton.cs" />
      <Compile Include="Assets\01_Scripts\02_Objects\ButtonState\SaveCircuitButton.cs" />

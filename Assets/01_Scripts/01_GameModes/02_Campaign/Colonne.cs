@@ -4,6 +4,11 @@ using UnityEngine;
 using System.Xml;
 using System.Xml.Serialization;
 
+/*public class Porte
+{
+    public int Porte;
+}*/
+
 public class Colonne {
 
     [XmlAttribute("nColonne")]
@@ -11,5 +16,6 @@ public class Colonne {
 
     public int BitDefaut;
 
-    public int Porte;
+    [XmlArray("Portes"), XmlArrayItem("Porte")]
+    public List<int> Portes;
 }

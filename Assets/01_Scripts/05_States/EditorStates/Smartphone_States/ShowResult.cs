@@ -33,7 +33,7 @@ namespace Smartphone_States
             Debug.Log("ShowResult");
             context.gridBoard.SelectRow(_row);
             context.SetResultHeader("Result of row : " + _row);
-            context.SetResultText(context.currentCircuit.Evaluate(_row).ToString());
+            context.SetResultText(context.currentCircuit.Evaluate(_row).ToStringWithSprites());
             context.ShowResultPanel(true);
         }
 

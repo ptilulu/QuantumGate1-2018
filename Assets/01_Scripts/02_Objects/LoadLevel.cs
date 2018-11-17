@@ -33,27 +33,30 @@ public class LoadLevel : MonoBehaviour
                 GameMode.circuits[0].SetEntry(i, QCS.Qubit.Zero);
             else
                 GameMode.circuits[0].SetEntry(i, QCS.Qubit.One);
-            
-            Debug.Log("Type of gate : " + level.colonnes[i].Porte);
-            switch(level.colonnes[i].Porte)
+            for (int j = 0; j < level.colonnes[i].Portes.Count; j ++ )
             {
-                case 1:
-                    if (!(GameMode.circuits[0].PutGate(0, i, QCS.Gate.HADAMARD)))
-                        Debug.Log("error");
-                    break;
-                case 2:
-                    if (!(GameMode.circuits[0].PutGate(0, i, QCS.Gate.SWAP)))
-                        Debug.Log("error");
-                    break;
-                case 3:
-                    if (!(GameMode.circuits[0].PutGate(0, i, QCS.Gate.NOT)))
-                        Debug.Log("error");
-                    break;
-                case 4:
-                    if (!(GameMode.circuits[0].PutGate(0, i, QCS.Gate.CONTROL)))
-                        Debug.Log("error");
-                    break;
+                Debug.Log("Type of gate : " + level.colonnes[i].Portes[j]);
+                switch(level.colonnes[i].Portes[j])
+                {
+                    case 1:
+                        if (!(GameMode.circuits[0].PutGate(j, i, QCS.Gate.HADAMARD)))
+                            Debug.Log("error");
+                        break;
+                    case 2:
+                        if (!(GameMode.circuits[0].PutGate(j, i, QCS.Gate.SWAP)))
+                            Debug.Log("error");
+                        break;
+                    case 3:
+                        if (!(GameMode.circuits[0].PutGate(j, i, QCS.Gate.NOT)))
+                            Debug.Log("error");
+                        break;
+                    case 4:
+                        if (!(GameMode.circuits[0].PutGate(j, i, QCS.Gate.CONTROL)))
+                            Debug.Log("error");
+                        break;
+                }
             }
+            
             
         }
         Debug.Log("Expected results : " + level.Resultats);

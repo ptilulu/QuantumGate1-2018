@@ -32,13 +32,13 @@ namespace Smartphone_States
         {
             Debug.Log("CompareResult");
             context.ShowCompareResultPanel(true);
-            context.SetCompareResultHeader("Result of row : " + _row);
 
             Debug.Log("Expected results : \"" + GameMode.level.Resultats + "\" Got : \"" + context.currentCircuit.Evaluate(_row).ToString() + "\"");
             if (GameMode.level.Resultats.Equals(context.currentCircuit.Evaluate(_row).ToString()))
             {
                 Debug.Log("Won");
-                context.SetCompareResultText("Expected results : \n" + context.currentCircuit.Evaluate(_row).ToStringWithSprites());
+                context.SetCompareResultText("<color=\"green\">You got the right result!</color> \n" + context.currentCircuit.Evaluate(_row).ToStringWithSprites());
+                context.ShowNextLevelButton(true);
             }
             else
             {
@@ -53,7 +53,6 @@ namespace Smartphone_States
                     else
                         expectedResults += GameMode.level.Resultats[k];
                 }
-                //expectedResults = expectedResults.Substring(0, expectedResults.Length - 4);
                 context.SetCompareResultText("Expected results : \n" + expectedResults + "\nYour results :\n" + context.currentCircuit.Evaluate(_row).ToStringWithSprites());
             }
         }
@@ -66,5 +65,17 @@ namespace Smartphone_States
         public override void OnBackResultClick() { context.CurrentState = _previousState; }
 
         public override void OnBackButton() { OnBackResultClick(); }
+
+        public override void OnNextLevelClick()
+        {
+            if (GameMode.level.id + 1 < GameMode.levelCollection.Levels.Count)
+            {
+                context.nextLevelButton.GetComponent<LoadLevel>().level = GameMode.levelCollection.Levels[GameMode.level.id + 1];
+                context.nextLevelButton.GetComponent<LoadLevel>().OnClick();
+            }
+
+        }
+
+        public override void OnNextLevelButton() { OnNextLevelClick(); }
     }
 }

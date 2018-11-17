@@ -49,7 +49,7 @@ public class CreateButtonLevels : MonoBehaviour
             newButton.transform.SetParent(grid.transform, false);
         }
 
-        
+        GameMode.levelCollection = levelCollection;
 
     }
 }

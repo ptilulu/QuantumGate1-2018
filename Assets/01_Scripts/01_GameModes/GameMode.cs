@@ -9,6 +9,7 @@ public class GameMode : MonoBehaviour
     public static List<QCS.Gate> gates;
     public static List<QCS.Gate> customGates;
     public static List<QCS.Circuit> circuits;
+    public static LevelContainer levelCollection;
     public static Level level;
 
     public static QCS.Circuit BaseCircuit()
