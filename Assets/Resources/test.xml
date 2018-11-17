@@ -7,8 +7,7 @@
 
 <LevelCollection>
 	<Levels>
-		<Level id="0">
-			<!-- valider un niveau -->
+		<Level id="0" name="valider un niveau">
 			<NbColonnes>
 				1
 			</NbColonnes>
@@ -20,17 +19,14 @@
 					<BitDefaut>
 						0
 					</BitDefaut>
-					
-						<Porte>
-							0
-						</Porte>
-					
+					<Portes>
+						<Porte>0</Porte>
+					</Portes>
 				</Colonne>
 			</Colonnes>
 			<Resultats>0</Resultats>
 		</Level>
-		<Level id="1">
-			<!-- changer un bit -->
+		<Level id="1" name="changer un bit">
 			<NbColonnes>
 				1
 			</NbColonnes>
@@ -42,17 +38,14 @@
 					<BitDefaut>
 						0
 					</BitDefaut>
-					
-						<Porte>
-							0
-						</Porte>
-					
+					<Portes>
+						<Porte>0</Porte>
+					</Portes>
 				</Colonne>
 			</Colonnes>
 			<Resultats>1</Resultats>
 		</Level>
-		<Level id="2">
-			<!-- changer un bit (2) -->
+		<Level id="2" name="changer un bit (2)">
 			<NbColonnes>
 				2
 			</NbColonnes>
@@ -79,8 +72,7 @@
 			</Colonnes>
 			<Resultats>10</Resultats>
 		</Level>
-		<Level id="3">
-			<!-- nondécouverte -->
+		<Level id="3" name="nondécouverte">
 			<NbColonnes>
 				1
 			</NbColonnes>
@@ -92,19 +84,16 @@
 					<BitDefaut>
 						0
 					</BitDefaut>
-					
 					<Portes>
 						<Porte>3</Porte>
 					</Portes>
-					
 				</Colonne>
 			</Colonnes>
 			<Resultats>0</Resultats>
 		</Level>
-		<Level id="4">
-			<!-- nondécouverte (2) -->
+		<Level id="4" name="nondécouverte (2)">
 			<NbColonnes>
-				6
+				2
 			</NbColonnes>
 			<ColonneHeight>
 				3
@@ -115,7 +104,7 @@
 						0
 					</BitDefaut>
 					<Portes>
-						<Porte>1</Porte>
+						<Porte>3</Porte>
 					</Portes>
 				</Colonne>
 				<Colonne nColonne="1">
@@ -123,51 +112,106 @@
 						0
 					</BitDefaut>
 					<Portes>
-						<Porte>1</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>00</Resultats>
+		</Level>
+		<Level id="5" name="nondécouverte (3)">
+			<NbColonnes>
+				2
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>3</Porte>
+						<Porte>3</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>3</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>10</Resultats>
+		</Level>
+		<Level id="6" name="nondécouverte (4)">
+			<NbColonnes>
+				5
+			</NbColonnes>
+			<ColonneHeight>
+				4
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>3</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+						<Porte>3</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>3</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
 					</Portes>
 				</Colonne>
 				<Colonne nColonne="2">
 					<BitDefaut>
 						0
 					</BitDefaut>
-					
 					<Portes>
-						<Porte>1</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
 					</Portes>
-					
 				</Colonne>
 				<Colonne nColonne="3">
 					<BitDefaut>
 						0
 					</BitDefaut>
-					
 					<Portes>
-						<Porte>1</Porte>
+						<Porte>0</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
 					</Portes>
-					
 				</Colonne>
 				<Colonne nColonne="4">
 					<BitDefaut>
 						0
 					</BitDefaut>
-					
 					<Portes>
-						<Porte>1</Porte>
+						<Porte>0</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
 					</Portes>
-					
-				</Colonne>
-				<Colonne nColonne="5">
-					<BitDefaut>
-						0
-					</BitDefaut>
-					
-					<Portes>
-						<Porte>1</Porte>
-					</Portes>
-					
 				</Colonne>
 			</Colonnes>
-			<Resultats>00</Resultats>
+			<Resultats>11001</Resultats>
 		</Level>
 	</Levels>
 </LevelCollection>
