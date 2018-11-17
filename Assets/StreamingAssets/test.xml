@@ -1,22 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- porte 0 = rien     -->
+<!-- porte 1 = H        -->
+<!-- porte 2 = swap     -->
+<!-- porte 3 = non      -->
+<!-- porte 4 = control  -->
+
 <LevelCollection>
 	<Levels>
 		<Level id="0">
+			<!-- valider un niveau -->
+			<NbColonnes>
+				1
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					
+						<Porte>
+							0
+						</Porte>
+					
+				</Colonne>
+			</Colonnes>
+			<Resultats>0</Resultats>
+		</Level>
+		<Level id="1">
+			<!-- changer un bit -->
+			<NbColonnes>
+				1
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					
+						<Porte>
+							0
+						</Porte>
+					
+				</Colonne>
+			</Colonnes>
+			<Resultats>1</Resultats>
+		</Level>
+		<Level id="2">
+			<!-- changer un bit (2) -->
 			<NbColonnes>
 				2
 			</NbColonnes>
-	        <ColonneHeight>
-	          4
-	        </ColonneHeight>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
 			<Colonnes>
 				<Colonne nColonne="0">
 					<BitDefaut>
 						0
 					</BitDefaut>
 					<Portes>
-						<Porte>1</Porte>
 						<Porte>0</Porte>
-						<Porte>3</Porte>
 					</Portes>
 				</Colonne>
 				<Colonne nColonne="1">
@@ -24,21 +73,42 @@
 						1
 					</BitDefaut>
 					<Portes>
-						<Porte>1</Porte>
 						<Porte>0</Porte>
-						<Porte>3</Porte>
 					</Portes>
 				</Colonne>
 			</Colonnes>
-			<Resultats>00, 01</Resultats>
+			<Resultats>10</Resultats>
 		</Level>
-		<Level id="1">
+		<Level id="3">
+			<!-- nondécouverte -->
 			<NbColonnes>
-				3
+				1
 			</NbColonnes>
-	        <ColonneHeight>
-	          4
-	        </ColonneHeight>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					
+					<Portes>
+						<Porte>3</Porte>
+					</Portes>
+					
+				</Colonne>
+			</Colonnes>
+			<Resultats>0</Resultats>
+		</Level>
+		<Level id="4">
+			<!-- nondécouverte (2) -->
+			<NbColonnes>
+				6
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
 			<Colonnes>
 				<Colonne nColonne="0">
 					<BitDefaut>
@@ -46,32 +116,58 @@
 					</BitDefaut>
 					<Portes>
 						<Porte>1</Porte>
-						<Porte>0</Porte>
-						<Porte>3</Porte>
 					</Portes>
 				</Colonne>
 				<Colonne nColonne="1">
 					<BitDefaut>
-						1
+						0
 					</BitDefaut>
 					<Portes>
 						<Porte>1</Porte>
-						<Porte>2</Porte>
-						<Porte>3</Porte>
 					</Portes>
 				</Colonne>
 				<Colonne nColonne="2">
 					<BitDefaut>
-						1
+						0
 					</BitDefaut>
+					
 					<Portes>
 						<Porte>1</Porte>
-						<Porte>0</Porte>
-						<Porte>3</Porte>
 					</Portes>
+					
+				</Colonne>
+				<Colonne nColonne="3">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+					
+				</Colonne>
+				<Colonne nColonne="4">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+					
+				</Colonne>
+				<Colonne nColonne="5">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+					
 				</Colonne>
 			</Colonnes>
-			<Resultats>00, 01</Resultats>
+			<Resultats>00</Resultats>
 		</Level>
 	</Levels>
 </LevelCollection>
