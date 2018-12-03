@@ -21,25 +21,36 @@ public class GateObject : MonoBehaviour
             UnityEngine.Object.Destroy(body);
 
         pipes.ForEach(UnityEngine.Object.Destroy);
+        UnityEngine.Object.Destroy(this);
     }
 
+    /// <summary>
+    /// Change le mateial du tuyau pour le selectionner
+    /// </summary>
     public void Select()
     {
         foreach (GameObject pipe in pipes)
-            pipe.GetComponentInChildren<Renderer>().material = ObjectFactory.pipeSelectedMaterial;
+        {
+            // UnityEngine.Object.Destroy(pipe);
+            pipe.GetComponentInChildren<SpriteRenderer>().sprite = Sprite.Create(ObjectFactory.pipeSelected2DMaterial, new Rect(0.0f, 0.0f, ObjectFactory.pipeSelected2DMaterial.width, ObjectFactory.pipeSelected2DMaterial.height), new Vector2(0.5f, 0.5f));
+        }
+        //pipe.GetComponentInChildren<Renderer>().material = ObjectFactory.pipeSelectedMaterial;
     }
     public void Select(int entry)
     {
-        pipes[entry].GetComponentInChildren<Renderer>().material = ObjectFactory.pipeSelectedMaterial;
+        pipes[entry].GetComponentInChildren<SpriteRenderer>().sprite = Sprite.Create(ObjectFactory.pipeSelected2DMaterial, new Rect(0.0f, 0.0f, ObjectFactory.pipeSelected2DMaterial.width, ObjectFactory.pipeSelected2DMaterial.height), new Vector2(0.5f, 0.5f));
     }
     public void Deselect()
     {
         foreach (GameObject pipe in pipes)
-            pipe.GetComponentInChildren<Renderer>().material = ObjectFactory.pipeMaterial;
+        {
+            pipe.GetComponentInChildren<SpriteRenderer>().sprite = Sprite.Create(ObjectFactory.pipe2DMaterial, new Rect(0.0f, 0.0f, ObjectFactory.pipe2DMaterial.width, ObjectFactory.pipe2DMaterial.height), new Vector2(0.5f, 0.5f));
+        }
+           
     }
     public void Deselect(int entry)
     {
-        pipes[entry].GetComponentInChildren<Renderer>().material = ObjectFactory.pipeMaterial;
+        pipes[entry].GetComponentInChildren<SpriteRenderer>().sprite = Sprite.Create(ObjectFactory.pipe2DMaterial, new Rect(0.0f, 0.0f, ObjectFactory.pipe2DMaterial.width, ObjectFactory.pipe2DMaterial.height), new Vector2(0.5f, 0.5f));
     }
 
     public void FadeOutAndDestroy()

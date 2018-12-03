@@ -46,7 +46,13 @@ public class AnimationManager : MonoBehaviour
         //Debug.Log(go.GetComponentsInChildren<MeshRenderer>().Length);
         for (float elapsedTime = 0f; elapsedTime < timeToFade; elapsedTime += Time.deltaTime)
         {
-            foreach (MeshRenderer mr in go.GetComponentsInChildren<Renderer>())
+            foreach (MeshRenderer mr in go.GetComponentsInChildren<MeshRenderer>())
+            {
+                Color c = mr.material.color;
+                float newAlpha = Mathf.Lerp(c.a, targetAlpha, elapsedTime / timeToFade);
+                mr.material.color = new Color(c.r, c.g, c.b, newAlpha);
+            }
+            foreach (SpriteRenderer mr in go.GetComponentsInChildren<SpriteRenderer>())
             {
                 Color c = mr.material.color;
                 float newAlpha = Mathf.Lerp(c.a, targetAlpha, elapsedTime / timeToFade);
@@ -55,7 +61,13 @@ public class AnimationManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        foreach (MeshRenderer mr in go.GetComponentsInChildren<Renderer>())
+        foreach (MeshRenderer mr in go.GetComponentsInChildren<MeshRenderer>())
+        {
+            Color c = mr.material.color;
+            mr.material.color = new Color(c.r, c.g, c.b, targetAlpha);
+        }
+
+        foreach (SpriteRenderer mr in go.GetComponentsInChildren<SpriteRenderer>())
         {
             Color c = mr.material.color;
             mr.material.color = new Color(c.r, c.g, c.b, targetAlpha);

@@ -23,6 +23,30 @@ public class ObjectFactory
             typeof(Material))) as Material;
 
     /// <summary>
+    /// Material Unity pour les tuyaux.
+    /// </summary>
+    public static Texture2D pipeStart2DMaterial =
+        Object.Instantiate(Resources.Load(
+            "04_Textures/start_sprite_tuyau_petit",
+            typeof(Texture2D))) as Texture2D;
+
+    /// <summary>
+    /// Material Unity pour les tuyaux.
+    /// </summary>
+    public static Texture2D pipe2DMaterial =
+        Object.Instantiate(Resources.Load(
+            "04_Textures/sprite_tuyau_petit2",
+            typeof(Texture2D))) as Texture2D;
+
+    /// <summary>
+    /// Material Unity pour les tuyaux.
+    /// </summary>
+    public static Texture2D pipeSelected2DMaterial =
+        Object.Instantiate(Resources.Load(
+            "04_Textures/selected",
+            typeof(Texture2D))) as Texture2D;
+
+    /// <summary>
     /// Material Unity pour les portes.
     /// </summary>
     private static Material _boxGateMaterial =
@@ -85,7 +109,7 @@ public class ObjectFactory
         entry.transform.localPosition = new Vector3(0f, 0f, 0f);
 
         /* collar */
-        GameObject collar = STARTING_PIPE(entry.transform);
+        GameObject collar = STARTING_PIPE2D(entry.transform);
 
         /* collar Transform */
         collar.transform.parent = root.transform;
@@ -179,6 +203,85 @@ public class ObjectFactory
     }
 
     /// <summary>
+    /// Construit l'objet unity représentant les tuyaux sous les entrée du circuit.
+    /// </summary>
+    /// <param name="parent">Parent de l'objet qui doit être créé</param>
+    private static GameObject STARTING_PIPE2D(Transform parent)
+    {
+        /* root */
+        GameObject root = new GameObject();
+
+        root.tag = "collar";
+        root.name = "collar";
+
+        /* root Transform */
+        root.transform.parent = parent;
+        root.transform.localScale = new Vector3(1, 1, 1);
+        root.transform.localPosition = new Vector3(0, 0, 0);
+
+        /* pipe */
+        //GameObject pipe = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        GameObject pipe = new GameObject();
+        SpriteRenderer sp = pipe.AddComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+        Sprite pipeSprite = Sprite.Create(pipeStart2DMaterial, new Rect(0.0f, 0.0f, pipeStart2DMaterial.width, pipeStart2DMaterial.height), new Vector2(0.5f, 0.5f));
+        //SpriteRenderer m_SpriteRenderer = new SpriteRenderer();
+        //m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        sp.sprite = pipeSprite;
+
+        /* pipe Material */
+        //pipe.GetComponent<Renderer>().material = pipeMaterial;
+
+        /* pipe Transform */
+        pipe.transform.parent = root.transform;
+        pipe.transform.localScale = new Vector3(GridBoard.pipeDiameter, GridBoard.localRowHeight / 2, GridBoard.pipeDiameter);
+        pipe.transform.localPosition = new Vector3(0, 0, 0);
+
+        return root;
+    }
+
+    /// <summary>
+    /// Construit un Objet unity représentant un tuyau en 2D.
+    /// </summary>
+    /// <param name="parent">Parent de l'objet qui doit être créé</param>
+    private static GameObject PIPE2D(Transform parent)
+    {
+        /* root */
+        GameObject root = new GameObject();
+
+        root.tag = "pipe";
+        root.name = "pipe";
+
+        /* root BoxCollider */
+        BoxCollider boxCollider = root.AddComponent<BoxCollider>();
+        boxCollider.size = new Vector3(0.5f * GridBoard.localColWidth, GridBoard.localRowHeight, GridBoard.pipeDiameter + 0.5f);
+
+        /* root Transform */
+        root.transform.parent = parent;
+        root.transform.localScale = new Vector3(1, 1, 1);
+        root.transform.localPosition = new Vector3(0, 0, 0);
+
+        /* pipe */
+        //GameObject pipe = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        GameObject pipe = new GameObject();
+        SpriteRenderer sp = pipe.AddComponent(typeof( SpriteRenderer)) as SpriteRenderer;
+        Sprite pipeSprite = Sprite.Create(pipe2DMaterial, new Rect(0.0f, 0.0f, pipe2DMaterial.width, pipe2DMaterial.height), new Vector2(0.5f, 0.5f));
+        //SpriteRenderer m_SpriteRenderer = new SpriteRenderer();
+        //m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        sp.sprite = pipeSprite;
+
+        /* pipe Material */
+        //pipe.GetComponent<Renderer>().material = pipeMaterial;
+
+        /* pipe Transform */
+        pipe.transform.parent = root.transform;
+        pipe.transform.localScale = new Vector3(GridBoard.pipeDiameter, GridBoard.localRowHeight / 2, GridBoard.pipeDiameter);
+        pipe.transform.localPosition = new Vector3(0, 0, 0);
+
+        /* bind gateObject */
+        return root;
+    }
+
+    /// <summary>
     /// Construit un Objet unity représentant une porte.
     /// </summary>
     /// <param name="parent">Parent de l'objet qui doit être créé</param>
@@ -235,7 +338,7 @@ public class ObjectFactory
     /// <param name="parent">Parent de l'objet qui doit être créé</param>
     public static GateObject IDENTITY_GATE(Transform parent)
     {
-        GameObject pipe = PIPE(parent);
+        GameObject pipe = PIPE2D(parent);
 
         GateObject gateObject = pipe.AddComponent<GateObject>();
         gateObject.body = null;
@@ -260,7 +363,7 @@ public class ObjectFactory
         /* gate pipes */
         for (int i = 0; i < gate.NbEntries; i++)
         {
-            GameObject pipe = PIPE(parent);
+            GameObject pipe = PIPE2D(parent);
             gateObject.pipes.Add(pipe);
         }
 
