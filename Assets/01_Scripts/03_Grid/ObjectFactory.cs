@@ -15,7 +15,7 @@ public class ObjectFactory
             typeof(Material))) as Material;
 
     /// <summary>
-    /// Material Unity pour les tuyaux selectionné.
+    /// Material Unity pour les tuyaux selectionnés.
     /// </summary>
     public static Material pipeSelectedMaterial =
         Object.Instantiate(Resources.Load(
@@ -23,7 +23,7 @@ public class ObjectFactory
             typeof(Material))) as Material;
 
     /// <summary>
-    /// Material Unity pour les tuyaux.
+    /// Material Unity pour les débuts de tuyaux en 2D.
     /// </summary>
     public static Texture2D pipeStart2DMaterial =
         Object.Instantiate(Resources.Load(
@@ -31,19 +31,19 @@ public class ObjectFactory
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
-    /// Material Unity pour les tuyaux.
+    /// Material Unity pour les tuyaux en 2D.
     /// </summary>
     public static Texture2D pipe2DMaterial =
         Object.Instantiate(Resources.Load(
-            "04_Textures/sprite_tuyau_petit2",
+            "04_Textures/sprite_tuyau_petit",
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
-    /// Material Unity pour les tuyaux.
+    /// Material Unity pour les tuyaux selectionnés en 2D.
     /// </summary>
     public static Texture2D pipeSelected2DMaterial =
         Object.Instantiate(Resources.Load(
-            "04_Textures/selected",
+            "04_Textures/sprite_selected_tuyau_petit",
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
@@ -55,18 +55,40 @@ public class ObjectFactory
             typeof(Material))) as Material;
 
     /// <summary>
+    /// Texture Unity pour les portes.
+    /// </summary>
+    private static Texture2D _boxGateMaterial2D =
+        Object.Instantiate(Resources.Load(
+            "04_Textures/porte_petit",
+            typeof(Texture2D))) as Texture2D;
+
+    /// <summary>
     /// Material Unity représantant un qubit à 0.
     /// </summary>
-    public static Material materialQubitZero = Object.Instantiate(Resources.Load(
+    public static Material materialQubitZero3D = Object.Instantiate(Resources.Load(
             "03_materials/MaterialEntry0",
             typeof(Material))) as Material;
 
     /// <summary>
     /// Material Unity représentant un qubit à 1.
     /// </summary>
-    public static Material materialQubitOne = Object.Instantiate(Resources.Load(
+    public static Material materialQubitOne3D = Object.Instantiate(Resources.Load(
             "03_materials/MaterialEntry1",
             typeof(Material))) as Material;
+
+    /// <summary>
+    /// Material Unity représantant un qubit à 0.
+    /// </summary>
+    public static Texture2D materialQubitZero = Object.Instantiate(Resources.Load(
+            "04_Textures/boule_blanche",
+            typeof(Texture2D))) as Texture2D;
+
+    /// <summary>
+    /// Material Unity représentant un qubit à 1.
+    /// </summary>
+    public static Texture2D materialQubitOne = Object.Instantiate(Resources.Load(
+            "04_Textures/boule_noir",
+            typeof(Texture2D))) as Texture2D;
 
     /// <summary>
     /// Construit un Objet unity englobé dans la classe "GateObject" représentant une porte du jeu.
@@ -98,7 +120,14 @@ public class ObjectFactory
         root.transform.localPosition = new Vector3(0, 0, 0);
 
         /* entry */
-        GameObject entry = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        //GameObject entry = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        GameObject entry = new GameObject();
+        SpriteRenderer sp = entry.AddComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+        //Sprite pipeSprite = Sprite.Create(materialQubitZero, new Rect(0.0f, 0.0f, materialQubitZero.width, materialQubitZero.height), new Vector2(0.5f, 0.5f));
+
+        /* entry BoxCollider */
+        BoxCollider boxCollider = entry.AddComponent<BoxCollider>();
+        boxCollider.size = new Vector3(0.5f * GridBoard.localColWidth, GridBoard.localRowHeight, GridBoard.pipeDiameter + 0.5f);
 
         entry.tag = "entry";
         entry.name = "entry";
@@ -106,7 +135,7 @@ public class ObjectFactory
         /* entry Transform */
         entry.transform.parent = root.transform;
         entry.transform.localScale = new Vector3(GridBoard.pipeDiameter, GridBoard.pipeDiameter, GridBoard.pipeDiameter);
-        entry.transform.localPosition = new Vector3(0f, 0f, 0f);
+        entry.transform.localPosition = new Vector3(0f, 1f, 0f);
 
         /* collar */
         GameObject collar = STARTING_PIPE2D(entry.transform);
@@ -114,7 +143,7 @@ public class ObjectFactory
         /* collar Transform */
         collar.transform.parent = root.transform;
         collar.transform.localScale = new Vector3(1, 1, 1);
-        collar.transform.localPosition = new Vector3(0, -2f, 0);
+        collar.transform.localPosition = new Vector3(0, -1f, 0);
 
         /* bind gateObject */
         EntryObject entryObject = entry.AddComponent<EntryObject>();
@@ -285,7 +314,7 @@ public class ObjectFactory
     /// Construit un Objet unity représentant une porte.
     /// </summary>
     /// <param name="parent">Parent de l'objet qui doit être créé</param>
-    private static GameObject GATE(QCS.Gate gate, Transform parent)
+    private static GameObject GATE3D(QCS.Gate gate, Transform parent)
     {
         GameObject root = new GameObject();
 
@@ -328,6 +357,62 @@ public class ObjectFactory
             GridBoard.localRowHeight * GridBoard.gateHeightRatio,
             GridBoard.gateThikness);
         cube.transform.localPosition = new Vector3(0, 0, 0);
+
+        return root;
+    }
+
+    /// <summary>
+    /// Construit un Objet unity représentant une porte.
+    /// </summary>
+    /// <param name="parent">Parent de l'objet qui doit être créé</param>
+    private static GameObject GATE(QCS.Gate gate, Transform parent)
+    {
+        GameObject root = new GameObject();
+
+        root.tag = "gate";
+        root.name = "gate";
+
+        /* root BoxCollider */
+        BoxCollider boxCollider = root.AddComponent<BoxCollider>();
+        boxCollider.size = new Vector3(GridBoard.localColWidth * gate.NbEntries, GridBoard.localRowHeight * GridBoard.gateHeightRatio, 2);
+        boxCollider.transform.localPosition = new Vector3(0, (GridBoard.localRowHeight / 2) - (GridBoard.localRowHeight * GridBoard.gateHeightRatio / 2), 0);
+
+        /* gate TextMesh */
+        TextMesh textMesh = root.AddComponent<TextMesh>();
+        textMesh.text = gate.Name;
+        textMesh.alignment = TextAlignment.Center;
+        textMesh.anchor = TextAnchor.MiddleCenter;
+        textMesh.offsetZ = -(GridBoard.gateThikness / 2);
+        textMesh.tabSize = 4f;
+        textMesh.fontSize = 50;
+        textMesh.lineSpacing = 1f;
+        textMesh.richText = true;
+        textMesh.color = Color.white;
+        textMesh.characterSize = 0.1f;
+        textMesh.fontStyle = FontStyle.Bold;
+
+        /* gate Transform */
+        root.transform.parent = parent;
+        root.transform.localScale = new Vector3(1, 1, 1);
+        root.transform.localPosition = new Vector3(0, (GridBoard.localRowHeight / 2) - (GridBoard.localRowHeight * GridBoard.gateHeightRatio / 2), 0);
+
+        /* cube */
+        //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        GameObject cube = new GameObject();
+        SpriteRenderer sp = cube.AddComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+        Sprite pipeSprite = Sprite.Create(_boxGateMaterial2D, new Rect(0.0f, 0.0f, _boxGateMaterial2D.width, _boxGateMaterial2D.height), new Vector2(0.5f, 0.5f));
+        sp.sprite = pipeSprite;
+
+        /* cube Material */
+        //cube.GetComponent<Renderer>().material = _boxGateMaterial;
+
+        /* cube Transform */
+        cube.transform.parent = root.transform;
+        cube.transform.localScale = new Vector3(GridBoard.localColWidth * gate.NbEntries - GridBoard.gateSideSpace,
+            GridBoard.localRowHeight * GridBoard.gateHeightRatio,
+            1);//GridBoard.gateThikness);
+        float offset = -(GridBoard.gateThikness / 2) + 0.1f; 
+        cube.transform.localPosition = new Vector3(0, 0, offset);
 
         return root;
     }

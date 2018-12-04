@@ -116,12 +116,12 @@ public class GridBoard
 
         EntryObject entryObject = entryObjects[entryStruct];
         GameObject entryGameObject = entryObject.entry;
-        Renderer renderer = entryGameObject.GetComponent<Renderer>();
+        SpriteRenderer renderer = entryGameObject.GetComponent<SpriteRenderer>();
 
         if (qubit.Equals(Qubit.One))
-            renderer.material = ObjectFactory.materialQubitOne;
+            renderer.sprite = Sprite.Create(ObjectFactory.materialQubitOne, new Rect(0.0f, 0.0f, ObjectFactory.materialQubitOne.width, ObjectFactory.materialQubitOne.height), new Vector2(0.5f, 0.5f));
         else
-            renderer.material = ObjectFactory.materialQubitZero;
+            renderer.sprite = Sprite.Create(ObjectFactory.materialQubitZero, new Rect(0.0f, 0.0f, ObjectFactory.materialQubitZero.width, ObjectFactory.materialQubitZero.height), new Vector2(0.5f, 0.5f));  //ObjectFactory.materialQubitZero;
     }
 
     /// <summary>
@@ -506,6 +506,7 @@ public class GridBoard
         circuit.OnInsertCol = delegate (Circuit.EntryStruct entryStruct, List<Circuit.GateStruct> gateStructs)
         {
             AddEntry(entryStruct);
+            SetEntryMaterial(entryStruct);
             PositionEntry(entryStruct);
             gateStructs.ForEach((Circuit.GateStruct gateStruct) =>
             {

@@ -18,6 +18,16 @@ namespace QCS
         /// </summary>
         public class EntryStruct
         {
+            /*SpriteRenderer spriteRenderer;
+            BoxCollider boxCollider;
+
+            void start()
+            {
+                spriteRenderer = this.GameObject.AddComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+                boxCollider = this.AddComponent<BoxCollider>();
+                boxCollider.size = new Vector3(0.5f * GridBoard.localColWidth, GridBoard.localRowHeight, GridBoard.pipeDiameter + 0.5f);
+            }*/
+
             public int col
             {
                 internal set;
