@@ -9,6 +9,9 @@ public class Level {
     [XmlAttribute("id")]
     public int id;
 
+    [XmlAttribute("name")]
+    public string name;
+
     public int NbColonnes;
 
     public int ColonneHeight;

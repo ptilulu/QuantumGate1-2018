@@ -397,20 +397,15 @@ public class ObjectFactory
         root.transform.localPosition = new Vector3(0, (GridBoard.localRowHeight / 2) - (GridBoard.localRowHeight * GridBoard.gateHeightRatio / 2), 0);
 
         /* cube */
-        //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         GameObject cube = new GameObject();
         SpriteRenderer sp = cube.AddComponent(typeof(SpriteRenderer)) as SpriteRenderer;
         Sprite pipeSprite = Sprite.Create(_boxGateMaterial2D, new Rect(0.0f, 0.0f, _boxGateMaterial2D.width, _boxGateMaterial2D.height), new Vector2(0.5f, 0.5f));
         sp.sprite = pipeSprite;
 
-        /* cube Material */
-        //cube.GetComponent<Renderer>().material = _boxGateMaterial;
-
         /* cube Transform */
         cube.transform.parent = root.transform;
         cube.transform.localScale = new Vector3(GridBoard.localColWidth * gate.NbEntries - GridBoard.gateSideSpace,
-            GridBoard.localRowHeight * GridBoard.gateHeightRatio,
-            1);//GridBoard.gateThikness);
+            GridBoard.localRowHeight * GridBoard.gateHeightRatio, 1);
         float offset = -(GridBoard.gateThikness / 2) + 0.1f; 
         cube.transform.localPosition = new Vector3(0, 0, offset);
 

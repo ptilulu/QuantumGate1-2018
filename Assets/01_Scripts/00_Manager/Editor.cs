@@ -33,6 +33,8 @@ public class Editor : MonoBehaviour
     public GameObject nextLevelButton;
     [SerializeField]
     private GameObject compareTextHeader;
+    [SerializeField]
+    private GameObject levelName;
 
 
     [SerializeField]
@@ -132,6 +134,8 @@ public class Editor : MonoBehaviour
             CurrentState = new PC_States.DefaultState(this);
         
         inputController = new InputController(this);
+
+        SetLevelName();
     }
 
     private InputController inputController;
@@ -192,6 +196,15 @@ public class Editor : MonoBehaviour
     public void ShowNextLevelButton(bool active)
     {
         nextLevelButton.SetActive(active);
+    }
+
+
+    public void SetLevelName()
+    {
+        if (levelName != null)
+            if (GameMode.level != null)
+                if (GameMode.level.name != null)
+                    levelName.GetComponent<TextMeshProUGUI>().SetText(GameMode.level.name);
     }
 
     // Setting panel
