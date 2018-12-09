@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         yield return new WaitForEndOfFrame();
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menus");
 	}
 
     /// <summary>

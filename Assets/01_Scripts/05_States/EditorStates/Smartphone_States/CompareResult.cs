@@ -38,6 +38,8 @@ namespace Smartphone_States
             {
                 Debug.Log("Won");
                 context.SetCompareResultText("<color=\"green\">You got the right result!</color> \n" + context.currentCircuit.Evaluate(_row).ToStringWithSprites());
+                if (PlayerPrefs.GetInt("vibration") == 1)
+                    Handheld.Vibrate();
                 context.ShowNextLevelButton(true);
             }
             else

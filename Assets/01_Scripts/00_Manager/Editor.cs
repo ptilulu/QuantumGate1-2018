@@ -12,7 +12,7 @@ public class Editor : MonoBehaviour
 
     public enum ClickPosition { TopLeft, TopRight, BotLeft, BotRight };
 
-	private string _previousScene = "Menu";
+	private string _previousScene = "Menus";
 
     // UI
     [SerializeField]
