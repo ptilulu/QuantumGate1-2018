@@ -28,6 +28,25 @@ namespace Smartphone_States
             _previousState = previousState;
         }
 
+        /// <summary>
+        /// Converti l'etat pour etre affichable avec les sprites TextMesh Pro
+        /// </summary>
+        public string ConvertWithSprites(string binary_string)
+        {
+            string working_string = "";
+            for (int k = 0; k < binary_string.Length; k++)
+            {
+
+                if (binary_string[k].Equals('0'))
+                    working_string += "<sprite=\"boule_blanche\" name=\"boule_blanche\">";
+                else if (binary_string[k].Equals('1'))
+                    working_string += "<sprite=\"boule_noir\" name=\"boule_noir\">";
+                else
+                    working_string += binary_string[k];
+            }
+            return working_string;
+        }
+
         public override void OnEnter()
         {
             Debug.Log("CompareResult");
@@ -45,7 +64,7 @@ namespace Smartphone_States
             else
             {
                 Debug.Log("Retry");
-                string expectedResults = "";
+                /*string expectedResults = "";
                 for (int k = 0; k < GameMode.level.Resultats.Length; k++)
                 {
                     if (GameMode.level.Resultats[k].Equals('0'))
@@ -54,7 +73,8 @@ namespace Smartphone_States
                         expectedResults += "<sprite=\"boule_noir\" name=\"boule_noir\">";
                     else
                         expectedResults += GameMode.level.Resultats[k];
-                }
+                }*/
+                string expectedResults = ConvertWithSprites(GameMode.level.Resultats);
                 context.SetCompareResultText("Expected results : \n" + expectedResults + "\nYour results :\n" + context.currentCircuit.Evaluate(_row).ToStringWithSprites());
             }
         }

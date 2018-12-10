@@ -70,5 +70,11 @@ namespace Smartphone_States
         public override void OnNextCircuitClick() { context.NextCircuit(); }
         public override void OnSaveCircuitClick() { context.CurrentState = new InputCircuitGateName(context, context.CurrentState); }
         public override void OnDeleteCircuitClick() { context.DeleteCurrentCircuit(); }
+
+        public override void OnCompareCircuitClick()
+        {
+            int row = context.currentCircuit.NbRow - 1;
+            context.CurrentState = new CompareResult(context, row, context.CurrentState);
+        }
     }
 }

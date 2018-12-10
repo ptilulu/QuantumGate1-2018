@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Load une scene suivant son nom
+/// Load un Niveau
 /// </summary>
 public class LoadLevel : MonoBehaviour
 {
@@ -56,8 +56,6 @@ public class LoadLevel : MonoBehaviour
                         break;
                 }
             }
-            
-            
         }
         Debug.Log("Expected results : " + level.Resultats);
 

@@ -89,48 +89,7 @@ namespace QCS
             }
             s += working_string.Substring(0, working_string.Length - 2);
 
-            return s;
-        }
-
-        public string ToStringWithSprites()
-        {
-            string s = "";
-            int n = Stuff.Log2(this.Vector.ColumnCount);
-            double min = 1.0f;
-
-            Debug.Log("Min : " + min);
-            for (int i = 0; i < this.Vector.ColumnCount; i++)
-            {
-                double p = (this.Vector[0, i] * this.Vector[0, i]).Real;
-                if (p > 0)
-                    if (p < min)
-                        min = p;
-            }
-            string working_string = "";
-            for (int i = 0; i < this.Vector.ColumnCount; i++)
-            {
-                double p = (this.Vector[0, i] * this.Vector[0, i]).Real;
-                if (p > 0)
-                {
-                    if (string.Format("{0:N2}", (this.Vector[0, i]).Real)[0].Equals('-'))
-                        working_string += "-";
-                    for (double j = 0.0f; j < min; j += (this.Vector[0, i] * this.Vector[0, i]).Real) // 2*min?
-                    {
-                        string binary_string = Convert.ToString(i, 2).PadLeft(n, '0') + ", ";
-                        for (int k = 0; k < binary_string.Length; k++)
-                        {
-
-                            if (binary_string[k].Equals('0'))
-                                working_string += "<sprite=\"boule_blanche\" name=\"boule_blanche\">";
-                            else if (binary_string[k].Equals('1'))
-                                working_string += "<sprite=\"boule_noir\" name=\"boule_noir\">";
-                            else
-                                working_string += binary_string[k];
-                        }
-                    }
-                }
-            }
-            s += working_string.Substring(0, working_string.Length - 2);
+            // Ancien format
             /*s += "\n";
             for (int i = 0; i < this.Vector.ColumnCount; i++)
             {
@@ -142,6 +101,33 @@ namespace QCS
             }*/
 
             return s;
+        }
+
+        /// <summary>
+        /// Converti l'etat pour etre affichable avec les sprites TextMesh Pro
+        /// </summary>
+        public string ConvertWithSprites(string binary_string)
+        {
+            string working_string = "";
+            for (int k = 0; k < binary_string.Length; k++)
+            {
+
+                if (binary_string[k].Equals('0'))
+                    working_string += "<sprite=\"boule_blanche\" name=\"boule_blanche\">";
+                else if (binary_string[k].Equals('1'))
+                    working_string += "<sprite=\"boule_noir\" name=\"boule_noir\">";
+                else
+                    working_string += binary_string[k];
+            }
+            return working_string;
+        }
+
+        /// <summary>
+        /// Renvoi l'etat pour etre affichable avec les sprites TextMesh Pro
+        /// </summary>
+        public string ToStringWithSprites()
+        {
+            return ConvertWithSprites(ToString());
         }
 
         public bool Equals(State state)

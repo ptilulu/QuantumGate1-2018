@@ -213,6 +213,7 @@
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\StreamingAssets\levels.xml" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />

@@ -3775,7 +3775,7 @@ Skybox:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 582675635}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: 17570b3d5de66bd4a966b2a22fc1a2b9, type: 2}
+  m_CustomSkybox: {fileID: 2100000, guid: f6d932167d6e5b049ac9de0cda092ce1, type: 2}
 --- !u!1 &601622612
 GameObject:
   m_ObjectHideFlags: 0
@@ -4233,7 +4233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000008499612}
+  m_AnchoredPosition: {x: 0, y: 0.000018690838}
   m_SizeDelta: {x: 0, y: 0.000015258789}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &816206331

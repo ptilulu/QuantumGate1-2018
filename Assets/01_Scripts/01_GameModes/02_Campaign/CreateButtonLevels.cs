@@ -36,8 +36,8 @@ public class CreateButtonLevels : MonoBehaviour
 
         //var levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "Resources", "test.xml"));
         var levelCollection = new LevelContainer();
-        if (Application.platform == RuntimePlatform.WindowsEditor) levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "StreamingAssets", "test.xml"));
-        else if (Application.platform == RuntimePlatform.Android) levelCollection = LevelContainer.Load("jar:file://" + Application.dataPath + "!/assets/test.xml");
+        if (Application.platform == RuntimePlatform.WindowsEditor) levelCollection = LevelContainer.Load(Path.Combine(Application.dataPath, "StreamingAssets", "levels.xml"));
+        else if (Application.platform == RuntimePlatform.Android) levelCollection = LevelContainer.Load("jar:file://" + Application.dataPath + "!/assets/levels.xml");
 
         for (int i = 0; i < levelCollection.Levels.Count; i++)
         {
