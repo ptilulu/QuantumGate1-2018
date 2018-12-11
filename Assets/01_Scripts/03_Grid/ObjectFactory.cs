@@ -11,7 +11,7 @@ public class ObjectFactory
     /// </summary>
     public static Material pipeMaterial =
         Object.Instantiate(Resources.Load(
-            "03_materials/MaterialPipe",
+            "03_materials/Old3DMaterials/MaterialPipe",
             typeof(Material))) as Material;
 
     /// <summary>
@@ -19,7 +19,7 @@ public class ObjectFactory
     /// </summary>
     public static Material pipeSelectedMaterial =
         Object.Instantiate(Resources.Load(
-            "03_materials/MaterialPipeSelected",
+            "03_materials/Old3DMaterials/MaterialPipeSelected",
             typeof(Material))) as Material;
 
     /// <summary>
@@ -27,7 +27,7 @@ public class ObjectFactory
     /// </summary>
     public static Texture2D pipeStart2DMaterial =
         Object.Instantiate(Resources.Load(
-            "04_Textures/start_sprite_tuyau_petit",
+            "04_Textures/Editor/start_sprite_tuyau_petit",
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
@@ -35,7 +35,7 @@ public class ObjectFactory
     /// </summary>
     public static Texture2D pipe2DMaterial =
         Object.Instantiate(Resources.Load(
-            "04_Textures/sprite_tuyau_petit",
+            "04_Textures/Editor/sprite_tuyau_petit",
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
@@ -43,7 +43,7 @@ public class ObjectFactory
     /// </summary>
     public static Texture2D pipeSelected2DMaterial =
         Object.Instantiate(Resources.Load(
-            "04_Textures/sprite_selected_tuyau_petit",
+            "04_Textures/Editor/sprite_selected_tuyau_petit",
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
@@ -51,7 +51,7 @@ public class ObjectFactory
     /// </summary>
     private static Material _boxGateMaterial =
         Object.Instantiate(Resources.Load(
-            "03_materials/MaterialGateBox",
+            "03_materials/Old3DMaterials/MaterialGateBox",
             typeof(Material))) as Material;
 
     /// <summary>
@@ -59,35 +59,35 @@ public class ObjectFactory
     /// </summary>
     private static Texture2D _boxGateMaterial2D =
         Object.Instantiate(Resources.Load(
-            "04_Textures/porte_petit",
+            "04_Textures/Editor/porte_petit",
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
     /// Material Unity représantant un qubit à 0.
     /// </summary>
     public static Material materialQubitZero3D = Object.Instantiate(Resources.Load(
-            "03_materials/MaterialEntry0",
+            "03_materials/Old3DMaterials/MaterialEntry0",
             typeof(Material))) as Material;
 
     /// <summary>
     /// Material Unity représentant un qubit à 1.
     /// </summary>
     public static Material materialQubitOne3D = Object.Instantiate(Resources.Load(
-            "03_materials/MaterialEntry1",
+            "03_materials/Old3DMaterials/MaterialEntry1",
             typeof(Material))) as Material;
 
     /// <summary>
     /// Material Unity représantant un qubit à 0.
     /// </summary>
     public static Texture2D materialQubitZero = Object.Instantiate(Resources.Load(
-            "04_Textures/boule_blanche",
+            "04_Textures/Editor/boule_blanche",
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
     /// Material Unity représentant un qubit à 1.
     /// </summary>
     public static Texture2D materialQubitOne = Object.Instantiate(Resources.Load(
-            "04_Textures/boule_noir",
+            "04_Textures/Editor/boule_noir",
             typeof(Texture2D))) as Texture2D;
 
     /// <summary>
