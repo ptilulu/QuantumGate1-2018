@@ -7,7 +7,7 @@
 
 <LevelCollection>
 	<Levels>
-		<Level id="0" name="valider un niveau">
+		<Level id="0" name="#0 valider un niveau">
 			<NbColonnes>
 				1
 			</NbColonnes>
@@ -26,7 +26,7 @@
 			</Colonnes>
 			<Resultats>0</Resultats>
 		</Level>
-		<Level id="1" name="changer un bit">
+		<Level id="1" name="#1 changer un bit">
 			<NbColonnes>
 				1
 			</NbColonnes>
@@ -45,7 +45,7 @@
 			</Colonnes>
 			<Resultats>1</Resultats>
 		</Level>
-		<Level id="2" name="changer un bit (2)">
+		<Level id="2" name="#2 changer un bit (2)">
 			<NbColonnes>
 				2
 			</NbColonnes>
@@ -72,7 +72,7 @@
 			</Colonnes>
 			<Resultats>10</Resultats>
 		</Level>
-		<Level id="3" name="nondécouverte">
+		<Level id="3" name='#3 découverte du "non"'>
 			<NbColonnes>
 				1
 			</NbColonnes>
@@ -91,7 +91,7 @@
 			</Colonnes>
 			<Resultats>0</Resultats>
 		</Level>
-		<Level id="4" name="nondécouverte (2)">
+		<Level id="4" name='#4 découverte du "non" (2)'>
 			<NbColonnes>
 				2
 			</NbColonnes>
@@ -118,7 +118,7 @@
 			</Colonnes>
 			<Resultats>00</Resultats>
 		</Level>
-		<Level id="5" name="nondécouverte (3)">
+		<Level id="5" name='#5 multiple "non"'>
 			<NbColonnes>
 				2
 			</NbColonnes>
@@ -147,7 +147,51 @@
 			</Colonnes>
 			<Resultats>10</Resultats>
 		</Level>
-		<Level id="6" name="nondécouverte (4)">
+		<Level id="6" name='#6 multiple "non" (2)'>
+			<NbColonnes>
+				3
+			</NbColonnes>
+			<ColonneHeight>
+				4
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>3</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>3</Porte>
+						<Porte>3</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="2">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>100</Resultats>
+		</Level>
+		<Level id="7" name='#7 maitrise du "non"'>
 			<NbColonnes>
 				5
 			</NbColonnes>
@@ -212,6 +256,315 @@
 				</Colonne>
 			</Colonnes>
 			<Resultats>11001</Resultats>
+		</Level>
+		<Level id="8" name='#8 découverte de "swap"'>
+			<NbColonnes>
+				2
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>01</Resultats>
+		</Level>
+		<Level id="9" name='#9 découverte de "swap" (2)'>
+			<NbColonnes>
+				2
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>10</Resultats>
+		</Level>
+		<Level id="10" name='#10 multiple "swap"'>
+			<NbColonnes>
+				3
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="2">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>100</Resultats>
+		</Level>
+		<Level id="11" name='#11 multiple "swap" (2)'>
+			<NbColonnes>
+				3
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="2">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>010</Resultats>
+		</Level>
+		<Level id="12" name='#12 "swap" longue distance'>
+			<NbColonnes>
+				3
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="2">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>110</Resultats>
+		</Level>
+		<Level id="13" name='#13 "swap" longue distance (2)'>
+			<NbColonnes>
+				3
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="2">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>011</Resultats>
+		</Level>
+		<Level id="14" name='#14 maitrise de "swap"'>
+			<NbColonnes>
+				5
+			</NbColonnes>
+			<ColonneHeight>
+				4
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="2">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="3">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="4">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>11001</Resultats>
+		</Level>
+		<Level id="15" name='#15 découverte du "control"'>
+			<NbColonnes>
+				2
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>4</Porte>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>11</Resultats>
 		</Level>
 	</Levels>
 </LevelCollection>
