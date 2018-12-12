@@ -913,8 +913,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "# Equipe actuelle (M1 2018)\r\n\r\nTHIEL Antoine\r\nDUFFAUT Julien\r\nMORAGUES
-    Lucas\r\nPHILIPPE Joshua\r\n\n# Equipe initiale (M1 2017)\r\n\r\nGros Jeremy\r\nHamonic
-    Francois\r\nDrouard Loic\r\nSonntag Christophe"
+    Lucas\r\nPHILIPPE Joshua\r\n\n# Equipe initiale (M1 2017)\r\n\r\nGROS Jeremy\r\nHAMONIC
+    Francois\r\nDROUARD Loic\r\nSONNTAG Christophe"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5375b20b4db9dd9458b2814dcb2f3732, type: 2}
   m_sharedMaterial: {fileID: 21788093259349664, guid: 5375b20b4db9dd9458b2814dcb2f3732,
@@ -991,11 +991,11 @@ MonoBehaviour:
     lineCount: 13
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
