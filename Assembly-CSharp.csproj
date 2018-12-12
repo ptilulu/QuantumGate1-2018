@@ -197,7 +197,6 @@
      <Compile Include="Assets\02_Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Main.cs" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\StreamingAssets\test.xml" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
@@ -206,7 +205,6 @@
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Resources\06_Fonts\Baloo\OFL.txt" />
-     <None Include="Assets\Resources\test.xml" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\02_Plugins\Math.NET\netstandard2.0\MathNet.Numerics.xml" />
      <None Include="Assets\02_Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
