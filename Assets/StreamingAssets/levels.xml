@@ -688,6 +688,221 @@
 				</Colonne>
 			</Colonnes>
 			<Resultats>010</Resultats>
+		</Level>	
+		<Level id="19" name='#19 découverte de "HADAMARD"'>
+			<NbColonnes>
+				1
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>0, 1</Resultats>
 		</Level>
+		<Level id="20" name='#20 découverte de "HADAMARD" (2)'>
+			<NbColonnes>
+				1
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						1
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>0, -1</Resultats>
+		</Level>
+		<Level id="21" name='#21 découverte de "HADAMARD" (3)'>
+			<NbColonnes>
+				1
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>1</Resultats>
+		</Level>
+		<Level id="22" name='#22 le début des choses sérieuses'>
+			<NbColonnes>
+				2
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>00, 01, 10, 11</Resultats>
+		</Level>
+		<Level id="23" name='#23 tant de posibilitées'>
+			<NbColonnes>
+				2
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>00, 01, -10, -11</Resultats>
+		</Level>
+		<Level id="24" name='#24 comportement avec "non"'>
+			<NbColonnes>
+				2
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+						<Porte>3</Porte>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>3</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>-10</Resultats>
+		</Level>
+		<Level id="25" name='#25 comportement avec "swap"'>
+			<NbColonnes>
+				2
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+						<Porte>2</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+				<Colonne nColonne="1">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>2</Porte>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>10</Resultats>
+		</Level>
+		<Level id="26" name='#26 ajouter une porte'>
+			<NbColonnes>
+				1
+			</NbColonnes>
+			<ColonneHeight>
+				3
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>0</Porte>
+						<Porte>0</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>0, 1</Resultats>
+		</Level>
+		<Level id="27" name='#27 retirer une porte'>
+			<NbColonnes>
+				1
+			</NbColonnes>
+			<ColonneHeight>
+				2
+			</ColonneHeight>
+			<Colonnes>
+				<Colonne nColonne="0">
+					<BitDefaut>
+						0
+					</BitDefaut>
+					<Portes>
+						<Porte>1</Porte>
+						<Porte>1</Porte>
+					</Portes>
+				</Colonne>
+			</Colonnes>
+			<Resultats>0, 1</Resultats>
+		</Level>
+
 	</Levels>
 </LevelCollection>
